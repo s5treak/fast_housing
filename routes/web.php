@@ -32,10 +32,8 @@ Route::get('user/message', function () {
     return view('user.message');
 })->middleware('user');
 
-Route::get('user/settings', function () {
-    return view('user.settings');
-})->middleware('user');
-
+Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user');
+Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user');
 
 Route::get('user/post', function () {
     return view('user.post');
@@ -55,3 +53,9 @@ Route::get('user/approved', function () {
 Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
+
+Route::get('user/profile', 'ProfileController@index')->middleware('auth');
+
+Route::post('user/profile', 'ProfileController@create')->middleware('auth');
+
+//Route::get('user/view', 'ProfileController@view')->middleware('auth');

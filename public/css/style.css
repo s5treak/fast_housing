@@ -10941,15 +10941,17 @@ img.mfp-img {
 	overflow: hidden;
 }
 
+
+
 .account-type input.account-type-radio ~ label:hover {
 	color: #289c41;
 	background-color: #e4f6e9;
 }
 
-.account-type input.account-type-radio:checked ~ label {
+/* .account-type input.account-type-radio:checked ~ label {
 	color: #fff;
 	background-color: #47bb67;
-}
+} */
 
 .account-type input.account-type-radio:empty ~ label:after,
 .account-type input.account-type-radio:empty ~ label:before {

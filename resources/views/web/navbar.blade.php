@@ -71,7 +71,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="#" class="current">Company Profile</a>
+                    <li><a href="/user/profile" class="current">My Profile</a>
                         <!-- <ul class="dropdown-nav">
                             <li><a href="dashboard.html">Dashboard</a></li>
                             <li><a href="dashboard-messages.html">Messages</a></li>

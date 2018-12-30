@@ -38,7 +38,7 @@
 						</ul>
 
 						<ul data-submenu-title="Account">
-							<li><a href="/user/settings"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a href="/user/settings/{{Auth::user()->id}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
 							<li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 						
