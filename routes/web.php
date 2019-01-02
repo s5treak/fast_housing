@@ -22,6 +22,11 @@ Route::get('/properties', function () {
 
 Auth::routes();
 
+
+Auth::routes(['verify' => true]);
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/dashboard', 'AdminController@index')->middleware('admin');
@@ -54,8 +59,8 @@ Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
 
-Route::get('user/profile', 'ProfileController@index')->middleware('auth');
+Route::get('user/profile', 'ProfileController@index');
 
-Route::post('user/profile', 'ProfileController@create')->middleware('auth');
+Route::post('user/profile', 'ProfileController@create');
 
 //Route::get('user/view', 'ProfileController@view')->middleware('auth');

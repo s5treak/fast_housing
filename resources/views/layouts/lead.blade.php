@@ -19,7 +19,7 @@
 
    
 
-    <title>Document</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     

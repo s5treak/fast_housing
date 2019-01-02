@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+
+    {
+        $this->middleware(['auth','user','verified']);
+
+    }
+    
     public function create(Request $request){
    
         $this->validate($request, [
