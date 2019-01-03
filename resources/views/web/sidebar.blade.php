@@ -37,6 +37,10 @@
 							</li>
 						</ul>
 
+						<ul data-submenu-title="Pay For Accomodation">
+							<li><a href="{{url('/user/payment')}}"><i class="icon-material-outline-business-center"></i> Make Payment</a></li>
+						</ul>
+
 						<ul data-submenu-title="Account">
 							<li><a href="/user/settings"><i class="icon-material-outline-settings"></i> Settings</a></li>
 							<li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>

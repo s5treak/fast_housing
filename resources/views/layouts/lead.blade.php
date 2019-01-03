@@ -19,7 +19,7 @@
 
    
 
-    <title>Document</title>
+    <title>Home Page</title>
 </head>
 <body>
     
