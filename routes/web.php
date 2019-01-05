@@ -55,3 +55,6 @@ Route::get('user/approved', function () {
 Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
+
+
+//Route::get('', ListingController@index)->name()
