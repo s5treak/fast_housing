@@ -57,9 +57,12 @@ Route::get('user/bookmark', function () {
 })->middleware('user');
 
 
+
 //Route for Paystack
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
-Route::get('/user/payment', function(){
-    return view('/user/pay');
-});
+Route::get('/user/payment', 'PaymentController@makePayment');
+
+// function(){
+//     return view('/user/pay')->middleware('user');
+// });
