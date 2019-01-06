@@ -19,7 +19,7 @@
 
    
 
-    <title>Home Page</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     

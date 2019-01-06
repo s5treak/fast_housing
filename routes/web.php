@@ -22,6 +22,11 @@ Route::get('/properties', function () {
 
 Auth::routes();
 
+
+Auth::routes(['verify' => true]);
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/dashboard', 'AdminController@index')->middleware('admin');
@@ -32,10 +37,8 @@ Route::get('user/message', function () {
     return view('user.message');
 })->middleware('user');
 
-Route::get('user/settings', function () {
-    return view('user.settings');
-})->middleware('user');
-
+Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user');
+Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user');
 
 Route::get('user/post', function () {
     return view('user.post');
@@ -63,6 +66,8 @@ Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 Route::get('/user/payment', 'PaymentController@makePayment');
 
-// function(){
-//     return view('/user/pay')->middleware('user');
-// });
+
+Route::get('user/profile', 'ProfileController@index');
+Route::post('user/profile', 'ProfileController@create');
+
+//Route::get('user/view', 'ProfileController@view')->middleware('auth');

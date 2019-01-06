@@ -1,6 +1,9 @@
 @extends('layouts.lead')
 
+@section('title')
 
+Fasthousing-Home
+@endsection
 @section('content')
 
 
@@ -400,7 +403,7 @@
     <section class="gradient-colored-section text-center" id="cta">
         <div class="container-fluid container-pad">
             <h4 class="cta-heading mt-4">Register as an Agent and List your Property Today.</h4>
-            <a href="#" class="btn-floating mx-1">
+            <a href="/register" class="btn-floating mx-1">
                 <button class="agent-cta-button btn btn-lg btn-light" type="button">
                     <i class="fa fa-edit"></i> Register</button>
             </a>
