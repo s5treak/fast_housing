@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
     
 
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <!--            Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
     <!--Font Awesome-->

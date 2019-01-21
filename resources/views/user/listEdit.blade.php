@@ -48,14 +48,14 @@
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Address <i class="help-icon" data-tippy-placement="right" title="please fill"></i></h5>
-										<input type="text" name="name" class="with-border" placeholder="Housing Agency Ltd" required>
+										<input type="text" name="name" value="{{$listings->name}}" class="with-border" placeholder="Housing Agency Ltd" required>
 									</div>
 								</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Rent Type <i class="help-icon" data-tippy-placement="right" title="please fill"></i></h5>
-										<select class="selectpicker with-border" name="cat_name" data-size="7" title="Select Category" required type="text">
+										<select class="selectpicker with-border" name="cat_name" data-size="7" title="{{$listings->cat_name}}" required type="text">
 											<option value="Long-term">Long Term</option>
 											<option value="Short-term">Short term</option>
 
@@ -68,7 +68,7 @@
 										<h5>Location  <i class="help-icon" data-tippy-placement="right" title="please fill"></i></h5>
 										<div class="input-with-icon">
 											<div id="autocomplete-container">
-												<input id="autocomplete-input" class="with-border" type="text" placeholder="Anywhere" name="location" required>
+												<input id="autocomplete-input" class="with-border" type="text" placeholder="Anywhere" value="{{$listings->location}}" name="location" required>
 											</div>
 											<i class="icon-material-outline-location-on"></i>
 										</div>
@@ -78,21 +78,21 @@
                                 <div class="col-xl-4">
 									<div class="submit-field">
 										<h5> baths</h5>
-										<input type="number" name="bath" class="with-border" placeholder=" 10 baths" required>
+										<input type="number" name="bath" value="{{$listings->bath}}Bath(s)" class="with-border" placeholder="{{$listings->bath}}Bath(s)" required>
 									</div>
 								</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>rooms</h5>
-										<input type="number" name="room" class="with-border" placeholder="1 room" required>
+										<input type="number" name="room" class="with-border" placeholder="{{$listings->room}}Room(s)" required>
 									</div>
 								</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>toilets</h5>
-										<input type="number" name="toilet" class="with-border" placeholder="19 toilets" required>
+										<input type="number" name="toilet" class="with-border" placeholder="{{$listings->toilet}}toilet(s)" required>
 									</div>
 								</div>
 
@@ -102,7 +102,7 @@
 										<div class="row">
 											<div class="col-xl-9">
 												<div class="input-with-icon">
-													<input class="with-border" type="text" name="price" placeholder="₦1,000 per month" required>
+													<input class="with-border" type="text" name="price" placeholder="₦1,000 per month" value="{{$listings->price}}" required>
 													<i class="currency">NGN</i>
 												</div>
 											</div>
@@ -117,7 +117,7 @@
 										<h5>What is the Duration?</h5>
 										<div class="keywords-container">
 											<div class="keyword-input-container">
-												<input type="number" class="keyword-input with-border" name="duration" placeholder="6month-2years" required/>
+												<input type="number" class="keyword-input with-border" name="duration" placeholder="{{$listings->duration}} Month(s)"  required/>
 												<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 											</div>
 											<div class="keywords-list"><!-- keywords go here --></div>
@@ -130,7 +130,7 @@
 								<div class="col-xl-12">
 									<div class="submit-field">
 										<h5>Description</h5>
-										<textarea cols="30" rows="5" class="with-border" name="description" placeholder="4 Bedroom Bungalow House for Short Let 21 Bullshit Avenue, NomansLand Lekki Lagos" required></textarea>
+										<textarea cols="30" rows="5" class="with-border" name="description"  placeholder="{{$listings->description}}" required></textarea>
                                     </div>
                                     </div>
                                 </div>
