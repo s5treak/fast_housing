@@ -37,6 +37,10 @@
 							</li>
 						</ul>
 
+						<ul data-submenu-title="Pay For Accomodation">
+							<li><a href="{{url('/user/payment')}}"><i class="icon-material-outline-business-center"></i> Make Payment</a></li>
+						</ul>
+
 						<ul data-submenu-title="Account">
 						   
 						   @if(Auth::user()->profile == true)
