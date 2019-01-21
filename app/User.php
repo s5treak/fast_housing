@@ -32,4 +32,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function profile(){
      return $this->hasOne('App\Profile');
     }
+
+    public function sender(){
+
+   
+    return $this->hasMany('App\Message','sender_id');
+       
+    }
+    
+     public function receiver(){
+        return $this->hasMany('App\Message','receiver_id','id');
+    }
 }

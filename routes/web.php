@@ -37,6 +37,10 @@ Route::get('user/message', function () {
     return view('user.message');
 })->middleware('user');
 
+Route::get('user/message/{id}', 'MessageController@show')->middleware('auth');
+
+Route::post('user/message/{id}', 'MessageController@send')->middleware('auth');
+
 Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user');
 Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user');
 
