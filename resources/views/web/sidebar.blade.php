@@ -32,7 +32,7 @@
 									
 									<li><a href="/user/post">List a Property</a></li>
 									<li><a href="/user/approved">Approved Listings<span class="nav-tag">2</span></a></li>
-									<li><a href="/user/listing">All Listings <span class="nav-tag">2</span></a></li>
+									<li><a href="/properties">All Listings <span class="nav-tag">2</span></a></li>
 								</ul>	
 							</li>
 						</ul>

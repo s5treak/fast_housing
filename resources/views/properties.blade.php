@@ -27,8 +27,8 @@
 </section>
 <div class="container">
 <div class="col-lg-12">
-    <h1 class="mb-2 text-lg-left font-weight-bold">4 Bedroom Bungalow House for Short Let 21 Bullshit Avenue, NomansLand Lekki Lagos</h1>
-    <p class="text-lg-left mb-0"><em><strong>Location:</strong></em> 21 Bullshit Avenue, NomansLand Lekki Lagos.</p>
+    <h1 class="mb-2 text-lg-left font-weight-bold">4 Bedroom Bungalow House To Let</h1>
+    <p class="text-lg-left mb-0"><em><strong>Location:</strong></em> @ 21 Wallstreet Avenue, Aba Abia State.</p>
     <p class="text-lg-left"><em><strong>Rent Type Available:</strong></em> Short Let</p>
 </div>
 </div>
@@ -45,7 +45,7 @@
         <tbody class="">
             <tr>
                 <th scope="row">Rent</th>
-                <td class=""><span>&#8358;</span>1,000,000</td>
+                <td class=""><span>&#8358;</span>#1,000,000</td>
             </tr>
 
 
@@ -57,7 +57,7 @@
 
             <tr>
                 <th scope="row">Rent charges</th>
-                <td class=""><span>&#8358;</span>1,000 per month</td>
+                <td class=""><span>&#8358;</span>#4,000 per month</td>
             </tr>
 
 
@@ -385,7 +385,7 @@
                                 <div class="thumb-content">
                                     <p class="card-text mb-0 fs-08">Portharcourt</p>
                                     <!--   Price-->
-                                    <h6 class="price-tag"><span>&#8358;</span>25,000</h6>
+                                    <h6 class="price-tag"><span>&#8358;</span>#25,000</h6>
                                     <!--   Product Features-->
                                     <p class="card-text font-small">
                                         <span class="mr-1 pr-1"><i class="fa fa-home"></i>4 rooms</span>

@@ -38,61 +38,26 @@
 								</div>
 
 								<ul>
+								@if(!$users->isEmpty())
+                                  @foreach($users as $user)
+                                  @if($user->name!=auth()->user()->name)
 									<li>
-										<a href="#">
-											<div class="message-avatar"><i class="status-icon status-online"></i><img src="images/user-avatar-small-03.jpg" alt="" /></div>
+										<a href="/user/message/{{$user->id}}">
+											<div class="message-avatar"><i class="status-icon status-online"></i><img src="/storage/profile_image/{{$user->profile->profile_img}}" alt="" /></div>
 
 											<div class="message-by">
 												<div class="message-by-headline">
-													<h5>David Peterson</h5>
+													<h5>{{$user->name}}</h5>
 													<span>4 hours ago</span>
 												</div>
-												<p>Thanks for reaching out. I'm quite busy right now on many</p>
+												<p>{{$user->profile->about_me}}</p>
 											</div>
 										</a>
 									</li>
-
-									<li class="active-message">
-										<a href="#">
-											<div class="message-avatar"><i class="status-icon status-offline"></i><img src="images/user-avatar-small-02.jpg" alt="" /></div>
-
-											<div class="message-by">
-												<div class="message-by-headline">
-													<h5>Sindy Forest</h5>
-													<span>Yesterday</span>
-												</div>
-												<p>Hi Tom! Hate to break it to you but I'm actually on vacation</p>
-											</div>
-										</a>
-									</li>
-									
-									<li>
-										<a href="#">
-											<div class="message-avatar"><i class="status-icon status-offline"></i><img src="images/user-avatar-placeholder.png" alt="" /></div>
-
-											<div class="message-by">
-												<div class="message-by-headline">
-													<h5>Sebastiano Piccio</h5>
-													<span>2 days ago</span>
-												</div>
-												<p>Hello, I want to talk about my project if you don't mind!</p>
-											</div>
-										</a>
-									</li>
-
-									<li>
-										<a href="#">
-											<div class="message-avatar"><i class="status-icon status-online"></i><img src="images/user-avatar-placeholder.png" alt="" /></div>
-
-											<div class="message-by">
-												<div class="message-by-headline">
-													<h5>Marcin Kowalski</h5>
-													<span>2 days ago</span>
-												</div>
-												<p>Yes, I received payment. Thanks for cooperation!</p>
-											</div>
-										</a>
-									</li>
+                                    
+                                    @endif
+                                    @endforeach
+                                    @endif
 
 								</ul>
 							</div>
@@ -102,88 +67,50 @@
 							<div class="message-content">
 
 								<div class="messages-headline">
-									<h4>Sindy Forest</h4>
+									<h4>{{Auth::user()->name}}</h4>
 									<a href="#" class="message-action"><i class="icon-feather-trash-2"></i> Delete Conversation</a>
 								</div>
-								
+								@if($messages)
+                                @foreach($messages as $message)
 								<!-- Message Content Inner -->
 								<div class="message-content-inner">
+								        @if($message->receiver_id==auth()->user()->id)
+										<!-- Time Sign -->
+										<div class="message-time-sign">
+											<span>{{$message->created_at->diffForHumans()}}</span>
+										</div>
+
+										<div class="message-bubble me">
+											<div class="message-bubble-inner">
+												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
+												<div class="message-text"><p>{{$message->message}}</p></div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
 										
-										<!-- Time Sign -->
+										@elseif($message->sender_id==auth()->user()->id)
 										<div class="message-time-sign">
-											<span>28 June, 2018</span>
+											<span>{{$message->created_at->diffForHumans()}}</span>
 										</div>
-
-										<div class="message-bubble me">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
-												<div class="message-text"><p>Thanks for choosing my offer. I will start working on your project tomorrow.</p></div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-
 										<div class="message-bubble">
 											<div class="message-bubble-inner">
 												<div class="message-avatar"><img src="images/user-avatar-small-02.jpg" alt="" /></div>
-												<div class="message-text"><p>Great. If you need any further clarification let me know. 👍</p></div>
+												<div style="background-color: green!important; color:white;" class="message-text"><p>{{$message->message}}</p></div>
 											</div>
 											<div class="clearfix"></div>
 										</div>
+										@endif
 
-										<div class="message-bubble me">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
-												<div class="message-text"><p>Ok, I will. 😉</p></div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
+										
 
-										<!-- Time Sign -->
-										<div class="message-time-sign">
-											<span>Yesterday</span>
-										</div>
-
-										<div class="message-bubble me">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
-												<div class="message-text"><p>Hi Sindy, I just wanted to let you know that project is finished and I'm waiting for your approval.</p></div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-
-										<div class="message-bubble">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-02.jpg" alt="" /></div>
-												<div class="message-text"><p>Hi Tom! Hate to break it to you, but I'm actually on vacation 🌴 until Sunday so I can't check it now. 😎</p></div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-
-										<div class="message-bubble me">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
-												<div class="message-text"><p>Ok, no problem. But don't forget about last payment. 🙂</p></div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-
-										<div class="message-bubble">
-											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-02.jpg" alt="" /></div>
-												<div class="message-text">
-													<!-- Typing Indicator -->
-													<div class="typing-indicator">
-														<span></span>
-														<span></span>
-														<span></span>
-													</div>
-												</div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
+										
 								</div>
+								@endforeach
+								@endif
 								<!-- Message Content Inner / End -->
-								
+								@if(session('status'))
+									<small class="alert alert-success">{{session('status')}}</small>
+								@endif
 								<!-- Reply Area -->
 								<form method="POST" action="{{route('message', $receiver->id)}}">
 								    
@@ -191,11 +118,10 @@
 									<div class="message-reply"> 
 									
 										<input type="hidden" id="receiver_id" name="receiver_id" value="{{ $receiver->id }}">
-										@if(session('status'))
-										<small class="alert alert-success">{{session('status')}}</small>
-										@endif
+									
 										<textarea cols="1" rows="1" name="message" placeholder="Your Message" data-autoresize></textarea>
 										<button type="submit" class="button ripple-effect">Send</button>
+										
 									</div>
                                </form>
 							</div>

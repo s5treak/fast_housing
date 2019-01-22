@@ -38,10 +38,10 @@ Route::get('user/chat', 'MessageController@chat')->middleware('user');
 
 Route::get('user/message/{id}', 'MessageController@show')->middleware('auth');
 
-Route::post('user/message/{id}', 'MessageController@send')->middleware('auth');
+Route::post('user/message/{id}', 'MessageController@send')->middleware('auth')->name('message');
 
-Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user')->name('message');
-Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user')->name('message');
+Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user');
+Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user');
 
 Route::get('user/post', function () {
     return view('user.post');

@@ -13837,6 +13837,10 @@ ul.dashboard-box-list > li:hover {
 .paid 	{ background-color: #40b660; }
 .unpaid { background-color: #dc3139; }
 
+.messages-container-inner .messages-inbox {
+    max-width: 900px!important;
+    border-right: 1px solid #eaeaea;
+}
 
 /* Listings in Dashboard
 ------------------------------------- */
