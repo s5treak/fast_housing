@@ -9,6 +9,16 @@ use App\Message;
 
 class MessageController extends Controller
 {
+
+    public function chat(){
+
+        $users = User::all();
+
+
+        return view('user/chat', compact('users'));
+
+    }    
+
     public function show($id){
 
    

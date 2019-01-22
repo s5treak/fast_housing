@@ -14459,6 +14459,11 @@ ul.dashboard-box-list > li:hover {
 	margin: 0;
 }
 
+.messages-container-inner .messages-inbox {
+    max-width: 1000px!important;
+    border-right: 1px solid #eaeaea;
+}
+
 .message-avatar img {
 	display: inline-block;
 	width: 54px;

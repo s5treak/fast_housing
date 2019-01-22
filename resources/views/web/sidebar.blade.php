@@ -20,7 +20,7 @@
 
 						<ul data-submenu-title="Start">
 							<li class="active"><a href="dashboard"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-							<li><a href="/user/message"><i class="icon-material-outline-question-answer"></i> Messages <span class="nav-tag">2</span></a></li>
+							<li><a href="/user/chat"><i class="icon-material-outline-question-answer"></i> Messages <span class="nav-tag">2</span></a></li>
 							<li><a href="/user/bookmark"><i class="icon-material-outline-star-border"></i> Bookmarks</a></li>
 							
 						</ul>

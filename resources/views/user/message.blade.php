@@ -185,11 +185,19 @@
 								<!-- Message Content Inner / End -->
 								
 								<!-- Reply Area -->
-								<div class="message-reply">
-									<textarea cols="1" rows="1" placeholder="Your Message" data-autoresize></textarea>
-									<button class="button ripple-effect">Send</button>
-								</div>
-
+								<form method="POST" action="{{route('message', $receiver->id)}}">
+								    
+									@csrf
+									<div class="message-reply"> 
+									
+										<input type="hidden" id="receiver_id" name="receiver_id" value="{{ $receiver->id }}">
+										@if(session('status'))
+										<small class="alert alert-success">{{session('status')}}</small>
+										@endif
+										<textarea cols="1" rows="1" name="message" placeholder="Your Message" data-autoresize></textarea>
+										<button type="submit" class="button ripple-effect">Send</button>
+									</div>
+                               </form>
 							</div>
 							<!-- Message Content -->
 
