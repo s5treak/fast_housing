@@ -26,6 +26,7 @@ class CreateListingsTable extends Migration
 			$table->string('duration');
 			$table->text('description');
            
+            
             $table->timestamps();
         });
     }

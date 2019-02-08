@@ -40,7 +40,7 @@
             <td>{{$listing->duration}} Months</td>
             <td>{{$listing->price}}</td>
             <td>{{$listing->description}}</td>
-            <td>{{$listing->images->pics}}</td>
+          
             <td><a href="{{ route('edit',$listing->id)}}" class="btn btn-primary">edit</a></td>
             <td><a href="{{ route('delete',$listing->id)}}" class="btn btn-danger">delete</a></td>
             

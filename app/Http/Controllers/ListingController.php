@@ -18,6 +18,17 @@ class ListingController extends Controller
 //        return view('user.post',compact('listings'));
 //    }
 	 public function create(Request $request){
+         
+         $filename = $request->file('pics')->getClientOriginalName();
+
+        $file=pathinfo($filename,PATHINFO_FILENAME);
+
+        $ext =$request->file('pics')->getClientOriginalExtension();
+
+
+        $tostore=$file . "_" . time() . "." . $ext;
+
+        $path =$request->file('pics')->storeAs('public/upload', $tostore);
     
          $listings = new Listing;
          $listings->user_id =auth()->user()->id;
@@ -29,11 +40,12 @@ class ListingController extends Controller
          $listings->toilet = $request->input('toilet');
          $listings->price = $request->input('price');
          $listings->duration = $request->input('duration');
-          $listings->description = $request->input('description');
+         $listings->description = $request->input('description');
+         $listings->pics=$tostore;
          
       
          $listings->save();
-        return redirect('/user/listimage')->with('success', 'Your lising  has been successfully proceed with the image listing');
+        return redirect()->back()->with('success', 'Your lising  has been successfully proceed with the image listing');
     }
     
     

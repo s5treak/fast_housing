@@ -16,9 +16,17 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->string('pics');
+            $table->integer('listing_id')->unsigned();
             $table->string('user_id');
             $table->string('title');
+            
+           $table->foreign('listing_id')->references('id')
+            ->on('listings')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            
            
+  
             $table->timestamps();
         });
     }

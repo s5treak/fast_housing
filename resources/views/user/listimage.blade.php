@@ -30,7 +30,7 @@
                   {{ session('success') }}
                </div> 
              @endif
-            <form class="form-horizontal" enctype="multipart/form-data" method="post"  >
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" multiple>
             @csrf
                 <div class="form-group">
        <input required type="file" class="form-control" name="pics" placeholder="address" multiple data-min-file-count="3" >
@@ -46,7 +46,7 @@
 			<div class="dashboard-footer-spacer"></div>
 			<div class="small-footer margin-top-15">
 				<div class="small-footer-copyrights">
-					© 2018 <strong>Hireo</strong>. All Rights Reserved.
+					© 2018 <strong>Fasthousing</strong>. All Rights Reserved.
 				</div>
 				<ul class="footer-social-links">
 					<li>
