@@ -42,8 +42,14 @@
 						</ul>
 
 						<ul data-submenu-title="Account">
-							<li><a href="/user/settings/{{Auth::user()->id}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
+						   
+						   @if(Auth::user()->profile == true)
+						<li><a href="/user/settings/{{Auth::user()->id}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
+						  @else
+						  <li><a href="/user/profile"><i class="icon-material-outline-settings"></i> Settings</a></li>
+						  @endif
 							<li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+					
 						</ul>
 						
 					</div>

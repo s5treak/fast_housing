@@ -37,6 +37,10 @@ Route::get('user/message', function () {
     return view('user.message');
 })->middleware('user');
 
+Route::get('user/message/{id}', 'MessageController@show')->middleware('auth');
+
+Route::post('user/message/{id}', 'MessageController@send')->middleware('auth');
+
 Route::get('user/settings/{id}', 'SettingsController@index')->middleware('user');
 Route::post('user/settings/{id}', 'SettingsController@update')->middleware('user');
 
@@ -59,6 +63,11 @@ Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
 
+Route::get('user/profile', 'ProfileController@index');
+
+Route::post('user/profile', 'ProfileController@create');
+
+//Route::get('user/view', 'ProfileController@view')->middleware('auth');
 
 
 //Route for Paystack
@@ -66,8 +75,6 @@ Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 Route::get('/user/payment', 'PaymentController@makePayment');
 
-
-Route::get('user/profile', 'ProfileController@index');
-Route::post('user/profile', 'ProfileController@create');
-
-//Route::get('user/view', 'ProfileController@view')->middleware('auth');
+// function(){
+//     return view('/user/pay')->middleware('user');
+// });

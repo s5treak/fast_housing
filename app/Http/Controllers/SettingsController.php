@@ -11,9 +11,12 @@ class SettingsController extends Controller
     public function index($id){
         
         $role = Auth::user()->role;
-        $profiles = Profile::whereId($id)->first();
+        $profiles = Profile::where('user_id', $id)->first();
+        $user = Auth::user();
         
-        return view('user.settings', compact('profiles', 'role'));
+         return view('user.settings', compact('profiles', 'role'));
+        
+        
     }
 
     public function update($id, Request $request){
