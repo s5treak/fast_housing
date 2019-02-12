@@ -68,7 +68,6 @@ Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
 
-<<<<<<< HEAD
 Route::get('user/profile', 'ProfileController@index');
 
 Route::post('user/profile', 'ProfileController@create');
@@ -84,8 +83,6 @@ Route::get('/user/payment', 'PaymentController@makePayment');
 // function(){
 //     return view('/user/pay')->middleware('user');
 // });
-=======
 Route::get('user/listimage/{id}', 'ImageController@create')->middleware('auth');
 Route::post('user/listimage', 'ImageController@store')->middleware('auth');
 
->>>>>>> 8b7cbca78ffd0a3439f2af285c0074325157e718
