@@ -41,7 +41,7 @@
 						</div>
 
 						<div class="content with-padding padding-bottom-10">
-							<form action="{{route('create')}}" method="POST"  enctype="multipart/form-data">
+							<form action="{{route('create')}}" method="POST" >
                                 @csrf
 							    <div class="row">
 
@@ -134,46 +134,8 @@
                                     </div>
                                     </div>
                                 </div>
- <!--                         begining of first image      -->            
-                        <div class="row">
-                                <div class="col-md-5">
-                                    <label class="control-label">Upload first Listing image </label>
-                                 </div>    
-                                <div class="col-md-7">
-                                    <input type="file" class="filestyle upload" name="pics" data-icon="false" multiple data-min-file-count="3">
-                                </div>   
-                        </div>   
-                                
-<!--                          end of first image      -->
-                                
-                                
-                                
-                                
-   <!--                          begining of second image      -->          
-                          <div class="row">
-                                <div class="col-md-5">
-                                    <label class="control-label">Upload second Listing image </label>
-                                 </div>    
-                                <div class="col-md-7">
-                                    <input type="file" class="filestyle upload" name="pic2" data-icon="false">
-                                </div>   
-                          </div>  
-    <!--                          end of second image      -->   
-                                
-                                
-                                                   
-   <!--                          begining of third image      -->          
-                          <div class="row">
-                                <div class="col-md-5">
-                                    <label class="control-label">Upload third Listing image </label>
-                                 </div>    
-                                <div class="col-md-7">
-                                    <input type="file" class="filestyle upload" name="pic3" data-icon="false">
-                                </div>   
-                          </div>                          
-   <!--                          end of third image      -->
-                                
-                     <input type="submit" class="btn lg-btn-primary" value="submit">
+                            
+                                    <input type="submit" class="btn lg-btn-primary" value="submit">
                                            
                                  
                                         </form>
