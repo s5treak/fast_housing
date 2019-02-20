@@ -12,7 +12,8 @@ Fasthousing-Home
         <div class="container-fluid">
             <!-- Navbar -->
             @include('layouts.nav')
-
+            <!-- data-aos="flip-left" data-aos-offset="200"
+     data-aos-delay="50" data-aos-duration="1000" data-aos-mirror="true" data-aos-once="false"  -->
             <!-- Title -->
             <div class="jumbotron text-center bg-transparent">
                 <h1 class="hero-heading">Find and Rent your next Property</h1>

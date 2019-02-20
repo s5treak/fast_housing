@@ -48,7 +48,35 @@
 						  @else
 						  <li><a href="/user/profile"><i class="icon-material-outline-settings"></i> Settings</a></li>
 						  @endif
-							<li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						  </li>
+                       
+                       
+					   @guest
+						   <li class="nav-item">
+							   <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+						   </li>
+						   
+						   @if (Route::has('register'))
+							   <li class="nav-item">
+								   <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+							   </li>
+						   @endif
+					   @else
+						   
+					   @endguest
+				   
+
+							<li>
+							<a href="{{ route('logout') }}"
+									  onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">
+									    <i class="icon-material-outline-power-settings-new"></i>Logout
+								   </a>
+                                   
+								   <!-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									   @csrf
+								   </form> -->
+							</li>
 					
 						</ul>
 						

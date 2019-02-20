@@ -12,9 +12,11 @@ class SettingsController extends Controller
         
         $role = Auth::user()->role;
         $profiles = Profile::where('user_id', $id)->first();
-        $user = Auth::user();
+       
+        $users = User::find($id);
         
-         return view('user.settings', compact('profiles', 'role'));
+        
+         return view('user.settings', compact('profiles', 'role', 'users'));
         
         
     }

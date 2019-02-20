@@ -462,6 +462,10 @@ header.fullwidth .container {
 	transform: translate3d(0,-50%,0);
 }
 
+li.a{
+	color:black!important;
+}
+
 /* IE 11 Fixes */
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
 	.header-notifications-trigger, 

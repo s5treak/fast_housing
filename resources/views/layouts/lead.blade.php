@@ -9,8 +9,9 @@
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
     <!--            Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
     <!--Font Awesome-->
@@ -21,8 +22,15 @@
 
     <title>@yield('title')</title>
 </head>
-<body>
+<body class="demo">
     
+<div id="loader-wrapper">
+	  <div id="loader"></div>
+
+	  <div class="loader-section section-left"></div>
+	  <div class="loader-section section-right"></div>
+
+	</div>  
 
 
    
@@ -33,11 +41,23 @@
     <!--     Scripts-->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
     <!--    Navbar scroll background color script-->
     <script>
+       
+       AOS.init();
+          
+            $(document).ready(function() {
+            
+            setTimeout(function(){
+            $('body').addClass('loaded');
+            
+            }, 2000);
+            
+        });
         $(document).ready(function() {
             // executes when HTML-Document is loaded and DOM is ready
             $(window).scroll(function() {

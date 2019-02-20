@@ -240,7 +240,7 @@
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Current Password</h5>
-										<input type="password" class="with-border">
+										<input type="password" value="{{$users->password}}" class="with-border">
 									</div>
 								</div>
 

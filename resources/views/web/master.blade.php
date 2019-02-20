@@ -15,7 +15,7 @@
     
     <div id="wrapper">
         @include('web.navbar')
-        
+
         @yield('content')
     
     </div>

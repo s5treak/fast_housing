@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Profile;
 use App\User;
 use App\Message;
 
@@ -27,9 +28,10 @@ class MessageController extends Controller
    $messages = Message::where('sender_id', $id)->orWhere('receiver_id', $id)->get();
    $receiver=User::whereId($id)->first();
    $users = User::all();
+   $profile = Profile::all();
 
 
-   return view('user/message', compact('receiver', 'messages', 'users'));
+   return view('user/message', compact('receiver', 'profile', 'messages', 'users'));
 
 
    }

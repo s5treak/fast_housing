@@ -82,7 +82,7 @@
 
 										<div class="message-bubble me">
 											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
+												<div class="message-avatar"><img src="/storage/profile_image/{{$message->receiver->profile_img}}" alt="" /></div>
 												<div class="message-text"><p>{{$message->message}}</p></div>
 											</div>
 											<div class="clearfix"></div>
@@ -94,7 +94,7 @@
 										</div>
 										<div class="message-bubble">
 											<div class="message-bubble-inner">
-												<div class="message-avatar"><img src="images/user-avatar-small-02.jpg" alt="" /></div>
+												<div class="message-avatar"><img src="/storage/profile_image/{{$message->sender->profile_img}}"alt="" /></div>
 												<div style="background-color: green!important; color:white;" class="message-text"><p>{{$message->message}}</p></div>
 											</div>
 											<div class="clearfix"></div>
