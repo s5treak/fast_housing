@@ -13,7 +13,7 @@
         
             <!-- Logo -->
             <div id="logo">
-                <a href="#"><img src="{{asset('img/fast%20housing%20png1.png')}}" id="fast"  alt="Fasthousing Logo"></a>
+                <a href="#"> <img src="{{asset('img/logo1.png')}}" id="fast"  alt="Fasthousing Logo"></a>
             </div>
 
             <!-- Main Navigation -->
