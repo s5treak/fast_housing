@@ -13,10 +13,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="canonical" href="index.html" />
     <link rel="shortcut icon" type="image/png" href="img/logo1.png" />
+    
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
     
 
 
@@ -30,21 +32,57 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+
+    <style>
+    
+    a:hover{
+        color:rgb(245, 105, 9)!important;
+    }
+    .card{
+        background-color: #ffffff1a!important;
+    }
+    #app{
+        
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/home.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: left;
+    height: 500px;
+    }
+    @media only screen and (max-width: 767px) {
+        .navbar{
+            background-color:#ffffff1a;
+        }
+    }
+
+    </style>
     
 </head>
 <body>
     <div id="app">
 
         <!-- Navbar -->
-     
+
+        <!-- <div id="loader-wrapper">
+            <div id="loader"></div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+      </div>  
+        -->
        
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
+        <nav class="navbar navbar-expand-lg  navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{asset('img/logo1.png')}}" style="height: 2.5rem;;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" style="color:white;"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,11 +96,11 @@
                        
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" style="color: white">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" style="color: white">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -89,14 +127,29 @@
             </div>
         </nav> 
 
-        <main class="py-4 mt-4">
+        <main class="py-4 mt-2">
             @yield('content')
+
+            
            
         </main>
     </div>
+
+     @include('layouts.footer')
     <!--     Scripts-->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    
+    <script>
+
+    $(document).ready(function() {
+            
+            setTimeout(function(){
+            $('body').addClass('loaded');
+            
+            }, 2000);
+            
+        });
+
+    </script>
 </body>
 </html>
