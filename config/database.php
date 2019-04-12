@@ -58,18 +58,18 @@ return [
         
         // 'mysql' => [
         //     'driver' => 'mysql',
-        //     'host' => 'db4free.net',
-        //     'port' => '3306',
-        //     'database' => 'fasthousing',
+        //    'host' => 'db4free.net',
+        //    'port' => '3306',
+        //    'database' => 'fasthousing',
         //     'username' => 'khaliz',
-        //     'password' => 'afdc369c',
+        // 'password' => 'afdc369c',
         //     'unix_socket' => env('DB_SOCKET', ''),
-        //     'charset' => 'utf8mb4',
+        //    'charset' => 'utf8mb4',
         //     'collation' => 'utf8mb4_unicode_ci',
         //     'prefix' => '',
         //     'prefix_indexes' => true,
         //     'strict' => true,
-        //     'engine' => null,
+        //      'engine' => null,
         // ],
 
         'pgsql' => [

@@ -2095,7 +2095,8 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 
 /* Media Queries Menu */
-@media (max-width: 1099px) {
+/* before it was @media max-width 1099px*/
+@media screen and (max-width: 1000px) and (min-width: 300px) {
 
 	/* Header Responsive Styles */
 	#responsive { display: none; }

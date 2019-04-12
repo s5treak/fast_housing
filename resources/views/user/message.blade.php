@@ -30,27 +30,37 @@
 
 							<!-- Messages -->
 							<div class="messages-inbox">
-								<div class="messages-headline">
+								<!-- <div class="messages-headline">
 									<div class="input-with-icon">
 											<input id="autocomplete-input" type="text" placeholder="Search">
 										<i class="icon-material-outline-search"></i>
 									</div>
-								</div>
+								</div> -->
 
 								<ul>
 								@if(!$users->isEmpty())
                                   @foreach($users as $user)
-                                  @if($user->name!=auth()->user()->name)
+                                  @if($user->isAdmin == 1)
 									<li>
 										<a href="/user/message/{{$user->id}}">
-											<div class="message-avatar"><i class="status-icon status-online"></i><img src="/storage/profile_image/{{$user->profile->profile_img}}" alt="" /></div>
+											<div class="message-avatar"><i class="status-icon status-online"></i>
+											@if($user->profile)
+											<img src="/storage/profile_image/{{$user->profile->profile_img}}" alt="" />
+											@else
+											<img src="{{asset('images/user-avatar-placeholder.png')}}">
+											@endif
+											</div>
 
 											<div class="message-by">
 												<div class="message-by-headline">
 													<h5>{{$user->name}}</h5>
 													<span>4 hours ago</span>
 												</div>
+												@if($user->profile)
 												<p>{{$user->profile->about_me}}</p>
+												@else
+												<p>Coming soon</p>
+												@endif
 											</div>
 										</a>
 									</li>
@@ -82,7 +92,13 @@
 
 										<div class="message-bubble me">
 											<div class="message-bubble-inner">
+											@if($message->receiver->profile)
 												<div class="message-avatar"><img src="/storage/profile_image/{{$message->receiver->profile_img}}" alt="" /></div>
+												@else{
+													
+													<div class="message-avatar"><img src="{{asset('images/user-avatar-placeholder.png')}}" alt="" /></div>
+												}
+												@endif
 												<div class="message-text"><p>{{$message->message}}</p></div>
 											</div>
 											<div class="clearfix"></div>
@@ -94,7 +110,12 @@
 										</div>
 										<div class="message-bubble">
 											<div class="message-bubble-inner">
+											    @if($message->sender->profile)
 												<div class="message-avatar"><img src="/storage/profile_image/{{$message->sender->profile_img}}"alt="" /></div>
+												@else{
+													<div class="message-avatar"><img src="{{asset('images/user-avatar-placeholder.png')}}" alt="" /></div>
+												}
+												@endif
 												<div style="background-color: green!important; color:white;" class="message-text"><p>{{$message->message}}</p></div>
 											</div>
 											<div class="clearfix"></div>

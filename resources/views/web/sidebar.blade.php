@@ -20,11 +20,17 @@
 
 						<ul data-submenu-title="Start">
 							<li class="active"><a href="dashboard"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+							@if(Auth::User()->isAdmin == 1)
 							<li><a href="/user/chat"><i class="icon-material-outline-question-answer"></i> Messages <span class="nav-tag">2</span></a></li>
-							<li><a href="/user/bookmark"><i class="icon-material-outline-star-border"></i> Bookmarks</a></li>
+							@else
+							<li><a href="/user/chat"><i class="icon-material-outline-question-answer"></i> Support<span class="nav-tag">2</span></a></li>
+							@endif
+
+							
+							<li><a href="/user/bookmark"><i class="icon-material-outline-star-border"></i> Notification</a></li>
 							
 						</ul>
-						
+						@if(Auth::user()->role == 'FastRep' && Auth::user()->isAdmin == 0)
 						<ul data-submenu-title="Organize and Manage">
 							
 							<li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
@@ -36,10 +42,13 @@
 								</ul>	
 							</li>
 						</ul>
-
+						@endif
+                       @if(Auth::user()->role == 'Customer' && Auth::user()->isAdmin == 0)
 						<ul data-submenu-title="Pay For Accomodation">
 							<li><a href="{{url('/user/payment')}}"><i class="icon-material-outline-business-center"></i> Make Payment</a></li>
 						</ul>
+						@endif
+
 
 						<ul data-submenu-title="Account">
 						   

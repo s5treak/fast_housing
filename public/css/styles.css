@@ -608,6 +608,8 @@ a.agent-link:hover {
     background: #ababab;
 }
 
+
+
 .carousel-indicators li.active {
     background: #555;
 }
@@ -619,3 +621,125 @@ a.agent-link:hover {
 .fs-08 {
     font-size: 0.8rem;
 }
+
+
+/* @media screen and (max-width: 1049px) and (min-width: 945px) */
+@media screen and (max-width: 361px)  and (min-width: 300px) {
+
+    .card{
+        width:16rem;
+      
+    }
+
+    #long-row,#short-row{
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -12px;
+        margin-left: -45px;
+    }
+  
+     #more{
+         float:none;
+         margin-left : -4rem;
+     }
+    
+}
+/* it was min 296px before */
+@media screen and (max-width:767px) and (min-width: 264px) {
+    .custom-select {
+        display: inline-block;
+        width: 130%!important;
+        height: calc(2.25rem + 2px);
+        padding: .375rem 1.75rem .375rem .75rem;
+        line-height: 1.5;
+        color: #495057;
+        vertical-align: middle;
+        margin-left: -1.7rem;
+        margin-top: 1rem;
+    }
+
+    #inlineFormInputGroupUsername2{
+        width: 130%!important;
+        margin-left: -1.7rem;
+        margin-top: 1rem;
+    }
+
+    #hero-btn{
+        margin-top:1rem;
+    }
+}
+@media screen and (max-width: 317px)  and (min-width: 263px) {
+
+    .card{
+        width:14.4rem;
+      
+    }
+
+    #long-row,#short-row{
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -13px;
+        margin-left: -49px;
+    }
+
+    #more{
+        
+        margin-right: -46px;
+    }
+}
+/* 
+@media screen and (max-width:980px) and (min-width: 768px) {
+
+      
+} */
+
+/* #padd,#padd1,{
+    padding-right:5px !important;
+}
+
+#padd2,#padd3{
+    padding: 0!important;
+} */
+#padd1,#padd2{
+    padding-left: 5px;
+}
+
+#padd3{
+padding-left: 0;
+}
+
+
+
+@media screen and (max-width:970px) and (min-width: 768px) {
+
+     /* #padd{
+        padding-right: 30px;
+    }  */
+    #padd{
+        padding-right:50px!important;
+    }
+    #padd1{
+        padding-left: 50px!important;
+    }
+
+    #padd2{
+        padding-left: 128px!important;
+    }
+
+    
+    
+    #padd3{
+    padding-left: 250px!important;
+    padding-top: 20px;
+    }
+    
+
+}
+
+

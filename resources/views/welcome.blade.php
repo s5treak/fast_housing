@@ -15,51 +15,51 @@ Fasthousing-Home
             <!-- data-aos="flip-left" data-aos-offset="200"
      data-aos-delay="50" data-aos-duration="1000" data-aos-mirror="true" data-aos-once="false"  -->
             <!-- Title -->
-            <div class="jumbotron text-center bg-transparent">
+            <div class="jumbotron text-center bg-transparent" id="jumbo">
                 <h1 class="hero-heading">Find and Rent your next Property</h1>
                 <p>It's just a Search Away!</p>
                 <!--              Search Form-->
+                <div class="container">
+                    <form method="POST" action="#" class="form-inline ">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12" id="padd">
+                                
 
-                <form method="POST" action="#" class="container form-inline d-flex justify-content-center">
-                    <div class="form-row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 pl-0 pr-0 min-width-select">
-                            <div class="input-group form-check">
+                                    <select class="custom-select align-items-center border-radius-left" id="inlineFormCustomSelect">
+                                        <option selected disabled="disabled">Type</option>
+                                        <option value="1">Flat/Rooms</option>
+                                        <option value="2">House</option>
+                                    </select>
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12" id="padd1">
+                                <label class="sr-only" for="inlineFormInputGroupUsername2">Location</label>
+                            
+                                    <input type="text" class="form-control no-border-radius no-border-right no-border-left no-border-bottom" id="inlineFormInputGroupUsername2" placeholder="Location e.g city" style="font-size: 0.84rem;">
+                            
+                            </div>
 
-                                <select class="custom-select align-items-center border-radius-left" id="inlineFormCustomSelect">
-                                    <option selected disabled="disabled">Type</option>
-                                    <option value="1">Flat/Rooms</option>
-                                    <option value="2">House</option>
-                                </select>
+                            <div class="col-lg-3 col-md-3 col-sm-12" id="padd2">
+                                
+                                    <select class="custom-select align-items-center no-border-left" id="inlineFormCustomSelect">
+                                        <option selected disabled="disabled">Duration</option>
+                                        <option value="1">Long Term</option>
+                                        <option value="2">Short Term</option>
+                                    </select>
+                                
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12" id="padd3">
+                                
+                                <button type="submit" id="hero-btn" class="media-no-border-radius-left bg-orange btn btn-primary"><i class="fa fa-search"></i>Search</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 pl-0 pr-0 position-margin min-width-location">
-                            <label class="sr-only" for="inlineFormInputGroupUsername2">Location</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control no-border-radius no-border-right no-border-left no-border-bottom" id="inlineFormInputGroupUsername2" placeholder="Location e.g city" style="font-size: 0.84rem;">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 pr-0 pl-0 min-width-select">
-                            <div class="input-group form-check">
-                                <select class="custom-select align-items-center no-border-left" id="inlineFormCustomSelect">
-                                    <option selected disabled="disabled">Duration</option>
-                                    <option value="1">Long Term</option>
-                                    <option value="2">Short Term</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 pl-0 position-margin center-search-margin">
-                            <div class="input-group-append">
-                                <span class="input-group"> <button type="submit" class="media-no-border-radius-left bg-orange btn btn-primary"><i class="fa fa-search"></i>Search</button></span>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    </form>
+                </div>    
 
 
             </div>
-            </form>
+            
 
 
 
@@ -87,10 +87,10 @@ Fasthousing-Home
                         </div>
 
                         <!-- Long term properties cards-->
-                        <div class="row">
+                        <div class="row" id="long-row">
 
                             <!--     Long term properties Card 1-->
-                            <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="col-sm-6 col-md-6 col-lg-3" id="term">
                                 <div class="card mb-2">
 
                                     <!--Card Header Image-->
@@ -123,7 +123,7 @@ Fasthousing-Home
 
                             <!--    Long term properties Card 2-->
                             <div class="col-sm-6 col-md-6 col-lg-3">
-                                <div class="card mb-2">
+                                <div class="card mb-2"id="long-term">
 
                                     <!--Card Header Image-->
                                     <img class="card-img-top" src="img/faster.jpg">
@@ -224,7 +224,7 @@ Fasthousing-Home
                         </div>
 
                         <!-- View More Long-term Link-->
-                        <div class="mb-3 float-right">
+                        <div class="mb-3" style="float:right;" id="more">
                             <a href="#">
                                 <button type="button" class="btn btn-sm btn-outline-warning">View more Long Term Properties</button>
                             </a>
@@ -240,7 +240,7 @@ Fasthousing-Home
                         </div>
 
                         <!-- Short Term properties cards-->
-                        <div class="row">
+                        <div class="row" id="short-row">
 
 
 
@@ -380,7 +380,7 @@ Fasthousing-Home
 
 
                         <!-- View More Short-term Link-->
-                        <div class="mb-3 float-right">
+                        <div class="mb-3" style="float:right;" id="more">
                             <a>
                                 <button type="button" class="btn btn-sm btn-outline-warning">View more Short Term Properties</button>
                             </a>

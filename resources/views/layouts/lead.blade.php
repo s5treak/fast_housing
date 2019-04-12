@@ -24,13 +24,13 @@
 </head>
 <body class="demo">
     
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
         <div id="loader"></div>
 
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
 
-    </div>  
+    </div>   -->
 
 
    
@@ -38,26 +38,27 @@
             @include('layouts.footer')
         
    
-    <!--     Scripts-->
+    <!--     S  cripts-->
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/vue.js')}}"></script>
     <!--    Navbar scroll background color script-->
     <script>
        
        AOS.init();
           
-            $(document).ready(function() {
+        //     $(document).ready(function() {
             
-            setTimeout(function(){
-            $('body').addClass('loaded');
+        //     setTimeout(function(){
+        //     $('body').addClass('loaded');
             
-            }, 2000);
+        //     }, 2000);
             
-        });
+        // });
         $(document).ready(function() {
             // executes when HTML-Document is loaded and DOM is ready
             $(window).scroll(function() {
@@ -82,6 +83,14 @@
             // ############
             // document ready
         });
+
+        var new = new Vue({
+            
+            el = '#jumbo',
+            data:{
+                'name' : 'socks and shoes'
+            }
+        })
     </script>
 
 </body>

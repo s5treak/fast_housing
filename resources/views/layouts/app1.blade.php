@@ -51,12 +51,25 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
     color: #fff;
     text-align: left;
-    max-height: 500px;
+    height: 500px;
     }
     @media only screen and (max-width: 767px) {
         .navbar{
             background-color:#ffffff1a;
         }
+        #app{
+            height: 780px;
+        }
+        .card{
+            margin-top: 4rem;
+        }
+    }  
+    @media screen and (max-width:361px) and (min-width: 290px){
+
+        .card{
+            width: 18rem;
+        }
+
     }
 
   
@@ -136,8 +149,9 @@
            
         </main>
     </div>
-
+     <div class="foot">
      @include('layouts.footer')
+    </div>
     <!--     Scripts-->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->

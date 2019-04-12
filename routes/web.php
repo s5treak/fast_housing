@@ -31,7 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/dashboard', 'AdminController@index')->middleware('admin');
 
-Route::get('user/dashboard', 'UserController@index')->middleware('user');
+Route::get('user/dashboard', 'UserController@index')->middleware('user') ;
 
 Route::get('user/chat', 'MessageController@chat')->middleware('user');
 
@@ -77,3 +77,7 @@ Route::get('/user/payment', 'PaymentController@makePayment');
 // function(){
 //     return view('/user/pay')->middleware('user');
 // });
+
+Route::get('/test', function(){
+  return view('test');
+});
