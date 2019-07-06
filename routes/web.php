@@ -28,6 +28,8 @@ Route::get('admin/dashboard', 'AdminController@index')->middleware('admin');
 
 Route::get('user/dashboard', 'UserController@index')->middleware('user');
 
+
+
 Route::get('user/message', function () {
     return view('user.message');
 })->middleware('user');
@@ -42,10 +44,13 @@ Route::get('user/post', function () {
 })->middleware('user');
 
 
-Route::get('user/listing', function () {
-    return view('user.listing');
-})->middleware('user');
+Route::get('user/test', 'ListingController@test')->middleware('auth');
+Route::get('user/listing/{id}', 'ListingController@delete')->name('delete');
+Route::get('user/listEdit/{id}', 'ListingController@edit')->name('edit');
 
+Route::post('user/post', 'ListingController@create')->middleware('auth')->name('create');
+Route::get('user/listing', 'ListingController@show')->middleware('auth')->name('show');
+Route::get('user/listimage', 'ListingController@image')->middleware('auth');
 
 Route::get('user/approved', function () {
     return view('user.approved');
@@ -55,3 +60,7 @@ Route::get('user/approved', function () {
 Route::get('user/bookmark', function () {
     return view('user.bookmark');
 })->middleware('user');
+
+Route::get('user/listimage/{id}', 'ImageController@create')->middleware('auth');
+Route::post('user/listimage', 'ImageController@store')->middleware('auth');
+
